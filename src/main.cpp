@@ -53,6 +53,7 @@ int main(int argc, const char* argv[])
     f.open(outputPath, std::ios::out);
 
     /* Usual C-style fluff. */
+    f << "#include <stdint.h>\n\n";
     f << "uint8_t " << arrayName << "[" << std::to_string(bytes.size()) << "] = \n{\n\t";
 
     /* Group bytes into rows of 8 for neatness. */
