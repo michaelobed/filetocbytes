@@ -8,6 +8,7 @@
 #include <cstdio>
 #include <fstream>
 #include <iostream>
+#include <vector>
 
 int main(int argc, const char* argv[])
 {
