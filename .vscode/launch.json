@@ -1,15 +1,15 @@
 {
     "configurations": [
         {
-            "name": "C/C++: clang++ build and debug active file",
+            "name": "Test (with main.cpp)",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/../bin/FileToCBytes",
+            "program": "${workspaceFolder}/bin/filetocbytes",
             "args": [
-                "../src/main.cpp"
+                "${workspaceFolder}/src/main.cpp"
             ],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
+            "cwd": "${workspaceFolder}/bin",
             "environment": [],
             "externalConsole": false,
             "MIMode": "lldb"

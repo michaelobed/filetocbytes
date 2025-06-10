@@ -2,8 +2,7 @@
 //  main.cpp
 //  FileToCBytes
 //
-//
-//  Copyright 2024 Michael Obed
+//  Copyright 2025 Michael Obed
 
 /* Includes. */
 #include <cstdio>
