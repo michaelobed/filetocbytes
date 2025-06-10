@@ -15,12 +15,16 @@ int main(int argc, const char* argv[])
     char buf[6];
     int byteCtr = 0;
     std::vector<uint8_t> bytes;
+    std::string inputPath;
     bool isText = false;
     std::string outputPath = "./out.c";
 
     /* Bail out if input file is not given. */
     if(argc < 2)
+    {
+        std::cout << "Usage: ./filetocbytes [-t] [-n foo] -i bar.bin [-o baz.c]";
         return -1;
+    }
 
     /* Parse args. */
     for(int i = 1; i < argc; i++)
@@ -33,13 +37,17 @@ int main(int argc, const char* argv[])
         else if(std::string(argv[i]) == "-n")
             arrayName = argv[i + 1];
 
+        /* Input path (required). */
+        else if(std::string(argv[i]) == "-i")
+            inputPath = argv[i + 1];
+
         /* Output path (optional, defaults to "./out.c"). */
         else if(std::string(argv[i]) == "-o")
             outputPath = argv[i + 1];
     }
 
     /* Open input file. */
-    std::fstream f(argv[1], std::ios::in | std::ios::binary);
+    std::fstream f(inputPath, std::ios::in | std::ios::binary);
 
     /* Read all bytes in. */
     while(!f.eof())

@@ -6,7 +6,7 @@
             "request": "launch",
             "program": "${workspaceFolder}/bin/filetocbytes",
             "args": [
-                "${workspaceFolder}/src/main.cpp"
+                "-i", "${workspaceFolder}/src/main.cpp"
             ],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/bin",
