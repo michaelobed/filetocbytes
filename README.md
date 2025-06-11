@@ -6,7 +6,7 @@ A small tool I wrote to shoehorn arbitrary binary data into AVR programs. Altern
 
 filetocbytes supports the following arguments:
 
-- `e`: The C-style array shall be defined with `extern "C"` linkage.
+- `-e`: The C-style array shall be defined with `extern "C"` linkage.
 - `-t`: The input file is a text file. This will cause a `\0` to be appended to the byte array.
 - `-n arrayName`: The C-style array shall be named `arrayName`.
 - `-i inputfile`: The input file is `inputfile` (required).
